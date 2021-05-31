@@ -1,0 +1,142 @@
+[
+  {
+    "_comment": "Cancel any TerraForged trees from TerraForged biomes.",
+    "select": { "name": "terraforged:.*" },
+    "cancellers": {
+      "type": "tree",
+      "namespaces": ["minecraft", "terraforged"]
+    }
+  },
+  {
+    "_comment": "Cancel any cacti from Bryce biomes.",
+    "select": { "name": "terraforged:bryce" },
+    "only_if_loaded": "dynamictreesplus",
+    "cancellers": {
+      "type": "dynamictreesplus:cactus",
+      "namespace": "minecraft"
+    }
+  },
+  {
+    "_comment": "Cancel any TerraForged tree features from Minecraft biomes.",
+    "select": { "name": "minecraft:.*" },
+    "cancellers": {
+      "method": "splice_after",
+      "type": "tree",
+      "namespace": "terraforged"
+    }
+  },
+  {
+    "_comment": "Certain Badlands biomes don't have the sandy tag but spawn cacti with TerraForged.",
+    "select": { "name": "minecraft:.*badlands.*" },
+    "only_if_loaded": "dynamictreesplus",
+    "cancellers": {
+      "method": "splice_before",
+      "type": "dynamictreesplus:cactus",
+      "namespace": "minecraft"
+    }
+  },
+
+  {
+    "_comment": "Add Birch trees to dark forests.",
+    "select": { "type": "spooky", "name": "minecraft:.*" },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "...": 19,
+          "birch": 1
+        }
+      }
+    }
+  },
+  {
+    "_comment": "Add Mega Jungle trees to Jungle biomes.",
+    "select": { "type": "jungle", "name": "minecraft:.*" },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "...": 5,
+          "mega_jungle": 1
+        }
+      }
+    }
+  },
+  {
+    "_comment": "Adds saguaro cacti to all Badlands biomes if DT+ is loaded.",
+    "select": { "name": "minecraft:.*badlands.*" },
+    "only_if_loaded": "dynamictreesplus",
+    "apply": {
+      "species" : {
+        "method": "splice_before",
+        "random": {
+          "...": 3,
+          "dynamictreesplus:saguaro_cactus": 1
+        }
+      },
+      "density" : { "math": { "add" : [ { "mul" : [ "noise", 0.6 ] }, 0.4 ] } },
+      "chance": 0.7
+    }
+  },
+  {
+    "_comment": "Makes trees in the Plains biome slightly rarer and less dense.",
+    "select": "minecraft:plains",
+    "apply": {
+      "density": [ 0.25, 0.5 ],
+      "chance": 0.01
+    }
+  },
+  {
+    "_comment": "Makes Savanna trees slightly rarer.",
+    "select": { "type": "savanna", "name": "minecraft:.*" },
+    "apply": {
+      "density": [ 0.75, 0.5 ],
+      "chance": 0.05
+    }
+  },
+
+  {
+    "select": { "name": "terraforged:.*fir_forest" },
+    "apply": {
+      "species": "spruce",
+      "chance": 1
+    }
+  },
+  {
+    "select": { "name": "terraforged:flower_plains" },
+    "apply": {
+      "species": {
+        "random": {
+          "oak": 1,
+          "birch": 3
+        }
+      },
+      "density": [ 0.6, 0.25 ],
+      "chance": 0.8
+    }
+  },
+  {
+    "select": { "name": "terraforged:stone_forest" },
+    "apply": {
+      "species": {
+        "random": {
+          "jungle": 5,
+          "mega_jungle": 1
+        }
+      },
+      "density": 0.4,
+      "chance": 1.0,
+      "forestness" : 1.0
+    }
+  },
+  {
+    "_comment": "Adds saguaro cacti to the Bryce biome if DT+ is loaded.",
+    "select": "terraforged:bryce",
+    "only_if_loaded": "dynamictreesplus",
+    "apply": {
+      "species" : "dynamictreesplus:saguaro_cactus",
+      "density" : { "math": { "add" : [ { "mul" : [ "noise", 0.6 ] }, 0.4 ] } },
+      "chance": 0.3
+    }
+  }
+]
