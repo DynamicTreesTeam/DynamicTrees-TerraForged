@@ -5,11 +5,11 @@ Dynamic Trees for TerraForged
 </h1>
 <p align="center">
     <a href="https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-terraforged">
-        <img src="http://cf.way2muchnoise.eu/dynamic-trees-terraforged.svg"  alt="Downloads"/>
-        <img src="http://cf.way2muchnoise.eu/versions/dynamic-trees-terraforged.svg"  alt="Versions"/>
+        <img src="http://cf.way2muchnoise.eu/488347.svg"  alt="Downloads"/>
+        <img src="http://cf.way2muchnoise.eu/versions/488347.svg"  alt="Versions"/>
     </a>
     <a href="https://www.curseforge.com/minecraft/mc-mods/dynamictrees">
-        <img src="http://cf.way2muchnoise.eu/title/dynamictrees_Requires_%20.svg"  alt="RequiresDT"/>
+        <img src="http://cf.way2muchnoise.eu/title/252818_Requires_%20.svg"  alt="RequiresDT"/>
     </a>
 </p>
 <br>
