@@ -103,6 +103,15 @@
     }
   },
   {
+    "select": { "name": "terraforged:.*oak_forest" },
+    "apply": {
+      "species": "oak",
+      "chance": 1.0,
+      "density": [ 1 ],
+      "forestness" : 1.0
+    }
+  },
+  {
     "select": { "name": "terraforged:flower_plains" },
     "apply": {
       "species": {

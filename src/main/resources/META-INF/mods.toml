@@ -1,6 +1,6 @@
 license="MIT"
 modLoader="javafml"
-loaderVersion="[35,)"
+loaderVersion="[40,)"
 issueTrackerURL="https://github.com/Harleyoc1/DynamicTreesTerraForged/issues"
 
 [[mods]]
@@ -19,27 +19,27 @@ Adds Dynamic Trees compatibility to TerraForged.
 [[dependencies.dtterraforged]]
     modId="forge"
     mandatory=true
-    versionRange="[35,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dtterraforged]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4,1.16.5]"
+    versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dtterraforged]]
     modId="dynamictrees"
     mandatory=true
-    versionRange="[0.10.0-Beta13,)"
+    versionRange="[0.11.0-Alpha1,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.dtterraforged]]
     modId="terraforged"
     mandatory=true
-    versionRange="[0.2.10,)"
+    versionRange="[0.3.0,)"
     ordering="AFTER"
     side="BOTH"
