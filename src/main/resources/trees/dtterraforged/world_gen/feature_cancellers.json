@@ -1,0 +1,38 @@
+[
+  {
+    "_comment": "Cancel any TerraForged trees from TerraForged biomes.",
+    "select": { "name": "terraforged:.*" },
+    "cancellers": {
+      "type": "tree",
+      "namespaces": ["minecraft", "terraforged"]
+    }
+  },
+  {
+    "_comment": "Cancel any cacti from Bryce biomes.",
+    "select": { "name": "terraforged:bryce" },
+    "only_if_loaded": "dynamictreesplus",
+    "cancellers": {
+      "type": "dynamictreesplus:cactus",
+      "namespace": "minecraft"
+    }
+  },
+  {
+    "_comment": "Cancel any TerraForged tree features from Minecraft biomes.",
+    "select": { "name": "minecraft:.*" },
+    "cancellers": {
+      "method": "splice_after",
+      "type": "tree",
+      "namespace": "terraforged"
+    }
+  },
+  {
+    "_comment": "Certain Badlands biomes don't have the sandy tag but spawn cacti with TerraForged.",
+    "select": { "name": "minecraft:.*badlands.*" },
+    "only_if_loaded": "dynamictreesplus",
+    "cancellers": {
+      "method": "splice_before",
+      "type": "dynamictreesplus:cactus",
+      "namespace": "minecraft"
+    }
+  }
+]
